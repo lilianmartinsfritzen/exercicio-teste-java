@@ -38,4 +38,13 @@ public class FinancingTests {
 		
 		Assertions.assertEquals(90000.0, financ.getTotalAmount());
 	}
+	
+	@Test
+	public void setTotalAmountShouldThrowIllegalArgumentExceptionWhenDataIsInvalid() {
+		
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {			
+			Financing financ = new Financing(150000.0, 5000.0, 32);
+		});
+	}
+
 }
