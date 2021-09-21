@@ -46,5 +46,14 @@ public class FinancingTests {
 			Financing financ = new Financing(150000.0, 5000.0, 32);
 		});
 	}
+	
+	@Test
+	public void setIncomeShouldUpdateValueWhenDataIsValid() {
 
+		Financing financ = new Financing(100000.0, 5000.0, 32);
+		
+		financ.setIncome(7000.0);
+		
+		Assertions.assertEquals(7000.0, financ.getIncome());
+	}
 }
