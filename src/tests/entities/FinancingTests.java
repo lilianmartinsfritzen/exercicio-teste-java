@@ -82,5 +82,10 @@ public class FinancingTests {
 			Financing financ = new Financing(100000.0, 5000.0, 12);
 		});
 	}
-
+	
+	@Test
+	public void entryShouldCalculateEntryCorrectly() {
+		Financing financ = new Financing(100000.0, 5000.0, 32);		
+		Assertions.assertEquals(20000.0, financ.entry());
+	}
 }
