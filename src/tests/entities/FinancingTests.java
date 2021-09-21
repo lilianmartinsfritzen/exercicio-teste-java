@@ -28,4 +28,14 @@ public class FinancingTests {
 			Financing financ = new Financing(100000.0, 2000.0, 32);
 		});
 	}
+	
+	@Test
+	public void setTotalAmountShouldUpdateValueWhenDataIsValid() {
+
+		Financing financ = new Financing(100000.0, 5000.0, 32);
+		
+		financ.setTotalAmount(90000.0);
+		
+		Assertions.assertEquals(90000.0, financ.getTotalAmount());
+	}
 }
